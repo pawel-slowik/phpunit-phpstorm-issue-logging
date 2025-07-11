@@ -1,0 +1,19 @@
+
+##teamcity[testCount count='2' flowId='%d']
+
+##teamcity[testSuiteStarted name='default' flowId='%d']
+
+##teamcity[testSuiteStarted name='App\Test\FooTest' locationHint='php_qn:///app/tests/FooTest.php::\App\Test\FooTest' flowId='%d']
+
+##teamcity[testStarted name='testPhpWarning' locationHint='php_qn:///app/tests/FooTest.php::\App\Test\FooTest::testPhpWarning' flowId='%d']
+##teamcity[testFailed name='testPhpWarning' message='PHPUnit\Event\Test\PhpWarningTriggered' details='Test Triggered PHP Warning (App\Test\FooTest::testPhpWarning)|nUndefined variable $notSet']
+
+##teamcity[testFinished name='testPhpWarning' duration='%d' flowId='%d']
+
+##teamcity[testStarted name='testPhpNotice' locationHint='php_qn:///app/tests/FooTest.php::\App\Test\FooTest::testPhpNotice' flowId='%d']
+
+##teamcity[testFinished name='testPhpNotice' duration='%d' flowId='%d']
+
+##teamcity[testSuiteFinished name='App\Test\FooTest' flowId='%d']
+
+##teamcity[testSuiteFinished name='default' flowId='%d']

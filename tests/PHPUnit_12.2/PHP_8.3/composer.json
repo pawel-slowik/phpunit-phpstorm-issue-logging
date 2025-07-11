@@ -1,0 +1,30 @@
+{
+    "name": "pawel-slowik/phpunit-phpstorm-issue-logging-test",
+    "description": "Show PHPUnit's test warnings / notices / deprecations in PhpStorm UI. Workaround for PHPUnit issue #4711",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Paweł Słowik",
+            "email": "pawel.slowik@zoho.com"
+        }
+    ],
+    "require": {
+        "php": "^8.3",
+        "ext-iconv": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^12.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "App\\Test\\": "tests/",
+            "PawelSlowik\\PhpunitPhpstormIssueLogging\\": "lib/"
+        }
+    }
+}

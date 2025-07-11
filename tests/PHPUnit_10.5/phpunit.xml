@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd"
+         beStrictAboutOutputDuringTests="true"
+         failOnAllIssues="true"
+         cacheDirectory=".phpunit.cache">
+    <testsuites>
+        <testsuite name="default">
+            <directory>tests</directory>
+        </testsuite>
+    </testsuites>
+    <source>
+        <include>
+            <directory>src</directory>
+        </include>
+    </source>
+    <extensions>
+        <bootstrap class="PawelSlowik\PhpunitPhpstormIssueLogging\PhpstormIssueLoggingExtension">
+            <parameter name="followExitCodeLogic" value="true"/>
+        </bootstrap>
+    </extensions>
+</phpunit>

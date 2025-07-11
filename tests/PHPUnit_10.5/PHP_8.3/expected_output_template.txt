@@ -1,0 +1,22 @@
+PHPUnit 10.5.%d by Sebastian Bergmann and contributors.
+
+Runtime:       PHP 8.3.%d
+Configuration: /app/phpunit.xml
+
+##teamcity[testCount count='2' flowId='%d']
+##teamcity[testSuiteStarted name='/app/phpunit.xml' flowId='%d']
+##teamcity[testSuiteStarted name='default' flowId='%d']
+##teamcity[testSuiteStarted name='App\Test\FooTest' locationHint='php_qn:///app/tests/FooTest.php::\App\Test\FooTest' flowId='%d']
+##teamcity[testStarted name='testPhpWarning' locationHint='php_qn:///app/tests/FooTest.php::\App\Test\FooTest::testPhpWarning' flowId='%d']
+##teamcity[testFailed name='testPhpWarning' message='PHPUnit\Event\Test\PhpWarningTriggered' details='Test Triggered PHP Warning (App\Test\FooTest::testPhpWarning) in /app/src/Foo.php:11|nUndefined variable $notSet']
+##teamcity[testFinished name='testPhpWarning' duration='%d' flowId='%d']
+##teamcity[testStarted name='testPhpNotice' locationHint='php_qn:///app/tests/FooTest.php::\App\Test\FooTest::testPhpNotice' flowId='%d']
+##teamcity[testFailed name='testPhpNotice' message='PHPUnit\Event\Test\PhpNoticeTriggered' details='Test Triggered PHP Notice (App\Test\FooTest::testPhpNotice) in /app/src/Foo.php:16|niconv(): Detected an illegal character in input string']
+##teamcity[testFinished name='testPhpNotice' duration='%d' flowId='%d']
+##teamcity[testSuiteFinished name='App\Test\FooTest' flowId='%d']
+##teamcity[testSuiteFinished name='default' flowId='%d']
+##teamcity[testSuiteFinished name='/app/phpunit.xml' flowId='%d']
+Time: 00:%d.%d, Memory: %d.%d MB
+
+OK, but there were issues!
+Tests: 2, Assertions: 2, Warnings: 1, Notices: 1.
