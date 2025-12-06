@@ -1,0 +1,56 @@
+PHPUnit 11.5.%d by Sebastian Bergmann and contributors.
+
+Runtime:       PHP 8.5.%d
+Configuration: /app/phpunit.xml
+
+##teamcity[testCount count='3' flowId='%d']
+##teamcity[testSuiteStarted name='/app/phpunit.xml' flowId='%d']
+##teamcity[testSuiteStarted name='default' flowId='%d']
+##teamcity[testSuiteStarted name='App\Test\FooTest' locationHint='php_qn:///app/tests/FooTest.php::\App\Test\FooTest' flowId='%d']
+##teamcity[testStarted name='testPhpWarning' locationHint='php_qn:///app/tests/FooTest.php::\App\Test\FooTest::testPhpWarning' flowId='%d']
+##teamcity[testFailed name='testPhpWarning' message='PHPUnit\Event\Test\PhpWarningTriggered' details='Test Triggered PHP Warning (App\Test\FooTest::testPhpWarning) in /app/src/Foo.php:11|nUndefined variable $notSet']
+##teamcity[testFinished name='testPhpWarning' duration='%d' flowId='%d']
+##teamcity[testStarted name='testPhpNotice' locationHint='php_qn:///app/tests/FooTest.php::\App\Test\FooTest::testPhpNotice' flowId='%d']
+##teamcity[testFailed name='testPhpNotice' message='PHPUnit\Event\Test\PhpNoticeTriggered' details='Test Triggered PHP Notice (App\Test\FooTest::testPhpNotice) in /app/src/Foo.php:16|niconv(): Detected an illegal character in input string']
+##teamcity[testFinished name='testPhpNotice' duration='%d' flowId='%d']
+##teamcity[testStarted name='testPhpunitDeprecation' locationHint='php_qn:///app/tests/FooTest.php::\App\Test\FooTest::testPhpunitDeprecation' flowId='%d']
+##teamcity[testFailed name='testPhpunitDeprecation' message='PHPUnit\Event\Test\PhpunitDeprecationTriggered' details='Test Triggered PHPUnit Deprecation (App\Test\FooTest::testPhpunitDeprecation)|nMockBuilder::enableAutoload() is deprecated and will be removed in PHPUnit 12 without replacement.']
+##teamcity[testFinished name='testPhpunitDeprecation' duration='%d' flowId='%d']
+##teamcity[testSuiteFinished name='App\Test\FooTest' flowId='%d']
+##teamcity[testSuiteFinished name='default' flowId='%d']
+##teamcity[testSuiteFinished name='/app/phpunit.xml' flowId='%d']
+Time: 00:%d.%d, Memory: %d.%d MB
+
+1 test triggered 1 PHPUnit deprecation:
+
+1) App\Test\FooTest::testPhpunitDeprecation
+MockBuilder::enableAutoload() is deprecated and will be removed in PHPUnit 12 without replacement.
+
+/app/tests/FooTest.php:22
+
+--
+
+1 test triggered 1 PHP warning:
+
+1) /app/src/Foo.php:11
+Undefined variable $notSet
+
+Triggered by:
+
+* App\Test\FooTest::testPhpWarning (2 times)
+  /app/tests/FooTest.php:12
+
+--
+
+1 test triggered 1 PHP notice:
+
+1) /app/src/Foo.php:16
+iconv(): Detected an illegal character in input string
+
+Triggered by:
+
+* App\Test\FooTest::testPhpNotice
+  /app/tests/FooTest.php:17
+
+OK, but there were issues!
+Tests: 3, Assertions: 3, Warnings: 1, PHPUnit Deprecations: 1, Notices: 1.

@@ -1,0 +1,3 @@
+No tests for PHPUnit 10.0.0 on PHP 8.5 because this combination triggers some
+deprecations in PHPUnit code, therefore requiring a separate testcase to be
+developed.
